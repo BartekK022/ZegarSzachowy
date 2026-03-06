@@ -32,7 +32,7 @@ public class Gracz {
     }
 
     private void uruchomZegar(){
-        countDownTimer = new CountDownTimer(ileSekund, 1000) {
+        countDownTimer = new CountDownTimer(ileSekund*1000, 1000) {
             @Override
             public void onFinish() {
 
@@ -47,6 +47,8 @@ public class Gracz {
         countDownTimer.start();
     }
     private void StopZegar() {
-        countDownTimer.cancel();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
     }
 }
