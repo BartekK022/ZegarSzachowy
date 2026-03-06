@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button1, button2;
     Gracz gracz1, gracz2;
+    int ileSekund;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    private String LadnyCzas(int ileSekund) {
+        int sekundy = ileSekund%60;
+        int minuty = (ileSekund/60)%60;
+        int godzina = ileSekund/3600;
+        return String.format("%02d:%02d:%02d", godzina, minuty, sekundy);
+    }
 }
