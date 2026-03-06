@@ -48,10 +48,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    private String LadnyCzas(int ileSekund) {
-        int sekundy = ileSekund%60;
-        int minuty = (ileSekund/60)%60;
-        int godzina = ileSekund/3600;
-        return String.format("%02d:%02d:%02d", godzina, minuty, sekundy);
-    }
+
 }

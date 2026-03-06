@@ -42,6 +42,7 @@ public class Gracz {
             public void onTick(long l) {
                 ileSekund = (int) (l/1000);
                 button.setText(""+ileSekund);
+
             }
         };
         countDownTimer.start();
@@ -50,5 +51,11 @@ public class Gracz {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
+    }
+    private String LadnyCzas(int ileSekund) {
+        int sekundy = ileSekund%60;
+        int minuty = (ileSekund/60)%60;
+        int godzina = ileSekund/3600;
+        return String.format("%02d:%02d:%02d", godzina, minuty, sekundy);
     }
 }
