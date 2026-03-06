@@ -1,6 +1,7 @@
 package com.example.projektzegarszachowy;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -25,7 +26,26 @@ public class MainActivity extends AppCompatActivity {
 
         gracz1 = new Gracz(button1, true);
         gracz2 = new Gracz(button2, false);
+        button1.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        gracz1.odwrocAktywnosc();
+                        gracz2.odwrocAktywnosc();
+                    }
+                }
+        );
+        button2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        gracz1.odwrocAktywnosc();
+                        gracz2.odwrocAktywnosc();
+                    }
+                }
+        );
 
 
     }
+
 }
